@@ -1,0 +1,674 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2240 1650" width="2240" height="1650">
+  <defs>
+    <filter id="shadow" x="-3%" y="-3%" width="106%" height="108%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#0F172A" flood-opacity="0.07" />
+    </filter>
+  </defs>
+
+  <rect width="2240" height="1650" fill="#F8FAFC" />
+
+  <!-- Header -->
+  <rect x="0" y="0" width="2240" height="104" fill="#FFFFFF" />
+  <line x1="0" y1="104" x2="2240" y2="104" stroke="#E2E8F0" stroke-width="1.5" />
+  <rect x="50" y="24" width="6" height="56" rx="3" fill="#0369A1" />
+  <text x="72" y="50" font-family="'Segoe UI', Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="25" font-weight="800" fill="#0F172A">EduAtitude — Modelo Entidade-Relacionamento (MER / PostgreSQL)</text>
+  <text x="72" y="75" font-family="'Segoe UI', Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="13.5" fill="#475569">Fonte: supabase/migrations/20261127222000_initial_schema.sql • 9 tabelas • Chaves UUID • Timestamps TIMESTAMPTZ • 13 índices • Triggers LGPD e updated_at</text>
+
+  <!-- Legend -->
+  <g transform="translate(1690, 36)">
+    <rect x="0" y="0" width="500" height="36" rx="8" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1.2" />
+    <rect x="12" y="9" width="30" height="18" rx="4" fill="#FEF3C7" />
+  <text x="27" y="21.5" text-anchor="middle" font-family="'Segoe UI', Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="700" fill="#92400E">PK</text>
+    <text x="48" y="22" font-family="'Segoe UI', Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="11" fill="#334155">Chave Primária</text>
+    <rect x="134" y="9" width="30" height="18" rx="4" fill="#E0F2FE" />
+  <text x="149" y="21.5" text-anchor="middle" font-family="'Segoe UI', Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="700" fill="#075985">FK</text>
+    <text x="170" y="22" font-family="'Segoe UI', Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="11" fill="#334155">Estrangeira</text>
+    <rect x="238" y="9" width="30" height="18" rx="4" fill="#F3E8FF" />
+  <text x="253" y="21.5" text-anchor="middle" font-family="'Segoe UI', Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="700" fill="#6B21A8">UK</text>
+    <text x="274" y="22" font-family="'Segoe UI', Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="11" fill="#334155">Única</text>
+    <rect x="314" y="9" width="32" height="18" rx="4" fill="#DCFCE7" />
+  <text x="330" y="21.5" text-anchor="middle" font-family="'Segoe UI', Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="700" fill="#166534">CHK</text>
+    <text x="352" y="22" font-family="'Segoe UI', Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="11" fill="#334155">Check</text>
+    <rect x="394" y="9" width="32" height="18" rx="4" fill="#E2E8F0" />
+  <text x="410" y="21.5" text-anchor="middle" font-family="'Segoe UI', Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="700" fill="#334155">IDX</text>
+    <text x="432" y="22" font-family="'Segoe UI', Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="11" fill="#334155">Índice</text>
+  </g>
+
+  <!-- Connectors -->
+  <g>
+      <path d="M 330 351 V 445" fill="none" stroke="#475569" stroke-width="1.9" stroke-linejoin="round"  />
+      <line x1="337" y1="359" x2="323" y2="359" stroke="#475569" stroke-width="1.8" />
+  <line x1="337" y1="365" x2="323" y2="365" stroke="#475569" stroke-width="1.8" />
+      <line x1="330" y1="432" x2="322" y2="445" stroke="#475569" stroke-width="1.8" />
+  <line x1="330" y1="432" x2="338" y2="445" stroke="#475569" stroke-width="1.8" />
+  <circle cx="330" cy="425" r="5" fill="#F8FAFC" stroke="#475569" stroke-width="1.8" />
+      <g>
+    <rect x="260.6" y="387" width="138.8" height="22" rx="11" fill="#FFFFFF" stroke="#475569" stroke-width="1.2" />
+    <text x="330" y="402" text-anchor="middle" font-family="'Segoe UI', Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="10.5" font-weight="600" fill="#475569">ON DELETE RESTRICT</text>
+  </g>
+    </g>
+  <g>
+      <path d="M 1120 351 V 445" fill="none" stroke="#475569" stroke-width="1.9" stroke-linejoin="round"  />
+      <line x1="1127" y1="359" x2="1113" y2="359" stroke="#475569" stroke-width="1.8" />
+  <line x1="1127" y1="365" x2="1113" y2="365" stroke="#475569" stroke-width="1.8" />
+      <line x1="1120" y1="432" x2="1112" y2="445" stroke="#475569" stroke-width="1.8" />
+  <line x1="1120" y1="432" x2="1128" y2="445" stroke="#475569" stroke-width="1.8" />
+  <circle cx="1120" cy="425" r="5" fill="#F8FAFC" stroke="#475569" stroke-width="1.8" />
+      <g>
+    <rect x="1050.6" y="387" width="138.8" height="22" rx="11" fill="#FFFFFF" stroke="#475569" stroke-width="1.2" />
+    <text x="1120" y="402" text-anchor="middle" font-family="'Segoe UI', Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="10.5" font-weight="600" fill="#475569">ON DELETE RESTRICT</text>
+  </g>
+    </g>
+  <g>
+      <path d="M 610 575 H 840" fill="none" stroke="#0284C7" stroke-width="1.9" stroke-linejoin="round"  />
+      <line x1="618" y1="568" x2="618" y2="582" stroke="#0284C7" stroke-width="1.8" />
+  <line x1="624" y1="568" x2="624" y2="582" stroke="#0284C7" stroke-width="1.8" />
+      <line x1="827" y1="575" x2="840" y2="583" stroke="#0284C7" stroke-width="1.8" />
+  <line x1="827" y1="575" x2="840" y2="567" stroke="#0284C7" stroke-width="1.8" />
+  <circle cx="820" cy="575" r="5" fill="#F8FAFC" stroke="#0284C7" stroke-width="1.8" />
+      <g>
+    <rect x="658.9" y="564" width="132.2" height="22" rx="11" fill="#FFFFFF" stroke="#0284C7" stroke-width="1.2" />
+    <text x="725" y="579" text-anchor="middle" font-family="'Segoe UI', Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="10.5" font-weight="600" fill="#0284C7">ON DELETE CASCADE</text>
+  </g>
+    </g>
+  <g>
+      <path d="M 1120 915 V 733" fill="none" stroke="#475569" stroke-width="1.9" stroke-linejoin="round"  />
+      <line x1="1113" y1="907" x2="1127" y2="907" stroke="#475569" stroke-width="1.8" />
+  <line x1="1113" y1="901" x2="1127" y2="901" stroke="#475569" stroke-width="1.8" />
+      <line x1="1120" y1="746" x2="1128" y2="733" stroke="#475569" stroke-width="1.8" />
+  <line x1="1120" y1="746" x2="1112" y2="733" stroke="#475569" stroke-width="1.8" />
+  <circle cx="1120" cy="753" r="5" fill="#F8FAFC" stroke="#475569" stroke-width="1.8" />
+      <g>
+    <rect x="1050.6" y="757" width="138.8" height="22" rx="11" fill="#FFFFFF" stroke="#475569" stroke-width="1.2" />
+    <text x="1120" y="772" text-anchor="middle" font-family="'Segoe UI', Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="10.5" font-weight="600" fill="#475569">ON DELETE RESTRICT</text>
+  </g>
+    </g>
+  <g>
+      <path d="M 330 757 V 915" fill="none" stroke="#0284C7" stroke-width="1.9" stroke-linejoin="round"  />
+      <line x1="337" y1="765" x2="323" y2="765" stroke="#0284C7" stroke-width="1.8" />
+  <line x1="337" y1="771" x2="323" y2="771" stroke="#0284C7" stroke-width="1.8" />
+      <line x1="330" y1="902" x2="322" y2="915" stroke="#0284C7" stroke-width="1.8" />
+  <line x1="330" y1="902" x2="338" y2="915" stroke="#0284C7" stroke-width="1.8" />
+  <circle cx="330" cy="895" r="5" fill="#F8FAFC" stroke="#0284C7" stroke-width="1.8" />
+      <g>
+    <rect x="263.9" y="825" width="132.2" height="22" rx="11" fill="#FFFFFF" stroke="#0284C7" stroke-width="1.2" />
+    <text x="330" y="840" text-anchor="middle" font-family="'Segoe UI', Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="10.5" font-weight="600" fill="#0284C7">ON DELETE CASCADE</text>
+  </g>
+    </g>
+  <g>
+      <path d="M 840 1020 H 610" fill="none" stroke="#475569" stroke-width="1.9" stroke-linejoin="round"  />
+      <line x1="832" y1="1027" x2="832" y2="1013" stroke="#475569" stroke-width="1.8" />
+  <line x1="826" y1="1027" x2="826" y2="1013" stroke="#475569" stroke-width="1.8" />
+      <line x1="623" y1="1020" x2="610" y2="1012" stroke="#475569" stroke-width="1.8" />
+  <line x1="623" y1="1020" x2="610" y2="1028" stroke="#475569" stroke-width="1.8" />
+  <circle cx="630" cy="1020" r="5" fill="#F8FAFC" stroke="#475569" stroke-width="1.8" />
+      <g>
+    <rect x="655.6" y="1009" width="138.8" height="22" rx="11" fill="#FFFFFF" stroke="#475569" stroke-width="1.2" />
+    <text x="725" y="1024" text-anchor="middle" font-family="'Segoe UI', Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="10.5" font-weight="600" fill="#475569">ON DELETE RESTRICT</text>
+  </g>
+    </g>
+  <g>
+      <path d="M 1400 1020 H 1630" fill="none" stroke="#475569" stroke-width="1.9" stroke-linejoin="round"  />
+      <line x1="1408" y1="1013" x2="1408" y2="1027" stroke="#475569" stroke-width="1.8" />
+  <line x1="1414" y1="1013" x2="1414" y2="1027" stroke="#475569" stroke-width="1.8" />
+      <line x1="1617" y1="1020" x2="1630" y2="1028" stroke="#475569" stroke-width="1.8" />
+  <line x1="1617" y1="1020" x2="1630" y2="1012" stroke="#475569" stroke-width="1.8" />
+  <circle cx="1610" cy="1020" r="5" fill="#F8FAFC" stroke="#475569" stroke-width="1.8" />
+      <g>
+    <rect x="1445.6" y="1009" width="138.8" height="22" rx="11" fill="#FFFFFF" stroke="#475569" stroke-width="1.2" />
+    <text x="1515" y="1024" text-anchor="middle" font-family="'Segoe UI', Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="10.5" font-weight="600" fill="#475569">ON DELETE RESTRICT</text>
+  </g>
+    </g>
+  <g>
+      <path d="M 1400 595 H 1630" fill="none" stroke="#6366F1" stroke-width="1.9" stroke-linejoin="round" stroke-dasharray="7 5" />
+      <line x1="1407" y1="588" x2="1407" y2="602" stroke="#6366F1" stroke-width="1.8" />
+  <circle cx="1417" cy="595" r="5" fill="#F8FAFC" stroke="#6366F1" stroke-width="1.8" />
+      <line x1="1617" y1="595" x2="1630" y2="603" stroke="#6366F1" stroke-width="1.8" />
+  <line x1="1617" y1="595" x2="1630" y2="587" stroke="#6366F1" stroke-width="1.8" />
+  <circle cx="1610" cy="595" r="5" fill="#F8FAFC" stroke="#6366F1" stroke-width="1.8" />
+      <g>
+    <rect x="1445.6" y="584" width="138.8" height="22" rx="11" fill="#FFFFFF" stroke="#6366F1" stroke-width="1.2" />
+    <text x="1515" y="599" text-anchor="middle" font-family="'Segoe UI', Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="10.5" font-weight="600" fill="#6366F1">ON DELETE SET NULL</text>
+  </g>
+    </g>
+  <g>
+      <path d="M 540 445 V 420 H 1535 V 255 H 1630" fill="none" stroke="#6366F1" stroke-width="1.9" stroke-linejoin="round" stroke-dasharray="7 5" />
+      <line x1="533" y1="438" x2="547" y2="438" stroke="#6366F1" stroke-width="1.8" />
+  <circle cx="540" cy="428" r="5" fill="#F8FAFC" stroke="#6366F1" stroke-width="1.8" />
+      <line x1="1617" y1="255" x2="1630" y2="263" stroke="#6366F1" stroke-width="1.8" />
+  <line x1="1617" y1="255" x2="1630" y2="247" stroke="#6366F1" stroke-width="1.8" />
+  <circle cx="1610" cy="255" r="5" fill="#F8FAFC" stroke="#6366F1" stroke-width="1.8" />
+      <g>
+    <rect x="1400.6" y="409" width="138.8" height="22" rx="11" fill="#FFFFFF" stroke="#6366F1" stroke-width="1.2" />
+    <text x="1470" y="424" text-anchor="middle" font-family="'Segoe UI', Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="10.5" font-weight="600" fill="#6366F1">ON DELETE SET NULL</text>
+  </g>
+    </g>
+  <g>
+      <path d="M 610 665 H 715 V 820 H 1515 V 705 H 1630" fill="none" stroke="#0284C7" stroke-width="1.9" stroke-linejoin="round"  />
+      <line x1="618" y1="658" x2="618" y2="672" stroke="#0284C7" stroke-width="1.8" />
+  <line x1="624" y1="658" x2="624" y2="672" stroke="#0284C7" stroke-width="1.8" />
+      <line x1="1617" y1="705" x2="1630" y2="713" stroke="#0284C7" stroke-width="1.8" />
+  <line x1="1617" y1="705" x2="1630" y2="697" stroke="#0284C7" stroke-width="1.8" />
+  <circle cx="1610" cy="705" r="5" fill="#F8FAFC" stroke="#0284C7" stroke-width="1.8" />
+      <g>
+    <rect x="1313.9" y="809" width="132.2" height="22" rx="11" fill="#FFFFFF" stroke="#0284C7" stroke-width="1.2" />
+    <text x="1380" y="824" text-anchor="middle" font-family="'Segoe UI', Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="10.5" font-weight="600" fill="#0284C7">ON DELETE CASCADE</text>
+  </g>
+    </g>
+  <g>
+      <path d="M 610 715 H 670 V 868 H 1555 V 975 H 1630" fill="none" stroke="#0284C7" stroke-width="1.9" stroke-linejoin="round"  />
+      <line x1="618" y1="708" x2="618" y2="722" stroke="#0284C7" stroke-width="1.8" />
+  <line x1="624" y1="708" x2="624" y2="722" stroke="#0284C7" stroke-width="1.8" />
+      <line x1="1617" y1="975" x2="1630" y2="983" stroke="#0284C7" stroke-width="1.8" />
+  <line x1="1617" y1="975" x2="1630" y2="967" stroke="#0284C7" stroke-width="1.8" />
+  <circle cx="1610" cy="975" r="5" fill="#F8FAFC" stroke="#0284C7" stroke-width="1.8" />
+      <g>
+    <rect x="1313.9" y="857" width="132.2" height="22" rx="11" fill="#FFFFFF" stroke="#0284C7" stroke-width="1.2" />
+    <text x="1380" y="872" text-anchor="middle" font-family="'Segoe UI', Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="10.5" font-weight="600" fill="#0284C7">ON DELETE CASCADE</text>
+  </g>
+    </g>
+
+  <!-- Tables -->
+  <g filter="url(#shadow)">
+      <rect x="50" y="135" width="560" height="216" rx="10" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.3" />
+      <path d="M 60 135 H 600 Q 610 135 610 145 V 173 H 50 V 145 Q 50 135 60 135 Z" fill="#1E293B" />
+      <text x="64" y="159" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="14" font-weight="700" fill="#FFFFFF">school_classes</text>
+      
+      
+        <rect x="62" y="176" width="30" height="18" rx="4" fill="#FEF3C7" />
+  <text x="77" y="188.5" text-anchor="middle" font-family="'Segoe UI', Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="700" fill="#92400E">PK</text>
+        <text x="134" y="189" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="11.5" font-weight="700" fill="#0F172A">id</text>
+        <text x="256" y="189" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="10.5" fill="#475569">UUID NOT NULL DEFAULT gen_random_uuid()</text>
+<rect x="51" y="197" width="558" height="24" fill="#F8FAFC" />
+        
+        <text x="134" y="213" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="11.5" font-weight="700" fill="#0F172A">name</text>
+        <text x="256" y="213" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="10.5" fill="#475569">TEXT NOT NULL</text>
+
+        <rect x="62" y="224" width="30" height="18" rx="4" fill="#DCFCE7" />
+  <text x="77" y="236.5" text-anchor="middle" font-family="'Segoe UI', Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="700" fill="#166534">CHK</text>
+        <text x="134" y="237" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="11.5" font-weight="700" fill="#0F172A">segment</text>
+        <text x="256" y="237" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="10.5" fill="#475569">TEXT NOT NULL (fundamental_1|2|high_school)</text>
+<rect x="51" y="245" width="558" height="24" fill="#F8FAFC" />
+        
+        <text x="134" y="261" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="11.5" font-weight="700" fill="#0F172A">grade</text>
+        <text x="256" y="261" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="10.5" fill="#475569">TEXT NOT NULL</text>
+
+        
+        <text x="134" y="285" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="11.5" font-weight="700" fill="#0F172A">school_year</text>
+        <text x="256" y="285" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="10.5" fill="#475569">INTEGER NOT NULL</text>
+<rect x="51" y="293" width="558" height="24" fill="#F8FAFC" />
+        
+        <text x="134" y="309" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="11.5" font-weight="700" fill="#0F172A">created_at</text>
+        <text x="256" y="309" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="10.5" fill="#475569">TIMESTAMPTZ NOT NULL DEFAULT now()</text>
+
+        
+        <text x="134" y="333" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="11.5" font-weight="700" fill="#0F172A">updated_at</text>
+        <text x="256" y="333" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="10.5" fill="#475569">TIMESTAMPTZ NOT NULL DEFAULT now()</text>
+    </g>
+  <g filter="url(#shadow)">
+      <rect x="840" y="135" width="560" height="216" rx="10" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.3" />
+      <path d="M 850 135 H 1390 Q 1400 135 1400 145 V 173 H 840 V 145 Q 840 135 850 135 Z" fill="#1E293B" />
+      <text x="854" y="159" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="14" font-weight="700" fill="#FFFFFF">teachers</text>
+      
+      
+        <rect x="852" y="176" width="30" height="18" rx="4" fill="#FEF3C7" />
+  <text x="867" y="188.5" text-anchor="middle" font-family="'Segoe UI', Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="700" fill="#92400E">PK</text>
+        <text x="924" y="189" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="11.5" font-weight="700" fill="#0F172A">id</text>
+        <text x="1046" y="189" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="10.5" fill="#475569">UUID NOT NULL DEFAULT gen_random_uuid()</text>
+<rect x="841" y="197" width="558" height="24" fill="#F8FAFC" />
+        
+        <text x="924" y="213" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="11.5" font-weight="700" fill="#0F172A">name</text>
+        <text x="1046" y="213" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="10.5" fill="#475569">TEXT NOT NULL</text>
+
+        <rect x="852" y="224" width="30" height="18" rx="4" fill="#F3E8FF" />
+  <text x="867" y="236.5" text-anchor="middle" font-family="'Segoe UI', Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="700" fill="#6B21A8">UK</text>
+        <text x="924" y="237" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="11.5" font-weight="700" fill="#0F172A">email</text>
+        <text x="1046" y="237" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="10.5" fill="#475569">TEXT NOT NULL UNIQUE</text>
+<rect x="841" y="245" width="558" height="24" fill="#F8FAFC" />
+        
+        <text x="924" y="261" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="11.5" font-weight="700" fill="#0F172A">specialty</text>
+        <text x="1046" y="261" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="10.5" fill="#475569">TEXT NOT NULL</text>
+
+        
+        <text x="924" y="285" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="11.5" font-weight="700" fill="#0F172A">active</text>
+        <text x="1046" y="285" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="10.5" fill="#475569">BOOLEAN NOT NULL DEFAULT true</text>
+<rect x="841" y="293" width="558" height="24" fill="#F8FAFC" />
+        
+        <text x="924" y="309" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="11.5" font-weight="700" fill="#0F172A">created_at</text>
+        <text x="1046" y="309" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="10.5" fill="#475569">TIMESTAMPTZ NOT NULL DEFAULT now()</text>
+
+        
+        <text x="924" y="333" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="11.5" font-weight="700" fill="#0F172A">updated_at</text>
+        <text x="1046" y="333" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="10.5" fill="#475569">TIMESTAMPTZ NOT NULL DEFAULT now()</text>
+    </g>
+  <g filter="url(#shadow)">
+      <rect x="1630" y="135" width="560" height="264" rx="10" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.3" />
+      <path d="M 1640 135 H 2180 Q 2190 135 2190 145 V 173 H 1630 V 145 Q 1630 135 1640 135 Z" fill="#312E81" />
+      <text x="1644" y="159" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="14" font-weight="700" fill="#FFFFFF">audit_logs</text>
+      <text x="2178" y="158" text-anchor="end" font-family="'Segoe UI', Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="10.5" font-weight="600" fill="#CBD5E1">IMUTÁVEL · LGPD (sem updated_at)</text>
+      
+        <rect x="1642" y="176" width="30" height="18" rx="4" fill="#FEF3C7" />
+  <text x="1657" y="188.5" text-anchor="middle" font-family="'Segoe UI', Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="700" fill="#92400E">PK</text>
+        <text x="1714" y="189" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="11.5" font-weight="700" fill="#0F172A">id</text>
+        <text x="1836" y="189" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="10.5" fill="#475569">UUID NOT NULL DEFAULT gen_random_uuid()</text>
+<rect x="1631" y="197" width="558" height="24" fill="#F8FAFC" />
+        <rect x="1642" y="200" width="30" height="18" rx="4" fill="#E0F2FE" />
+  <text x="1657" y="212.5" text-anchor="middle" font-family="'Segoe UI', Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="700" fill="#075985">FK</text><rect x="1676" y="200" width="30" height="18" rx="4" fill="#E2E8F0" />
+  <text x="1691" y="212.5" text-anchor="middle" font-family="'Segoe UI', Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="700" fill="#334155">IDX</text>
+        <text x="1714" y="213" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="11.5" font-weight="700" fill="#0F172A">student_id</text>
+        <text x="1836" y="213" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="10.5" fill="#475569">UUID NULL -&gt; students(id) [SET NULL]</text>
+
+        
+        <text x="1714" y="237" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="11.5" font-weight="700" fill="#0F172A">actor_id</text>
+        <text x="1836" y="237" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="10.5" fill="#475569">UUID NOT NULL</text>
+<rect x="1631" y="245" width="558" height="24" fill="#F8FAFC" />
+        
+        <text x="1714" y="261" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="11.5" font-weight="700" fill="#0F172A">actor_name</text>
+        <text x="1836" y="261" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="10.5" fill="#475569">TEXT NOT NULL</text>
+
+        <rect x="1642" y="272" width="30" height="18" rx="4" fill="#DCFCE7" />
+  <text x="1657" y="284.5" text-anchor="middle" font-family="'Segoe UI', Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="700" fill="#166534">CHK</text>
+        <text x="1714" y="285" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="11.5" font-weight="700" fill="#0F172A">actor_role</text>
+        <text x="1836" y="285" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="10.5" fill="#475569">TEXT NOT NULL (5 papéis RBAC)</text>
+<rect x="1631" y="293" width="558" height="24" fill="#F8FAFC" />
+        
+        <text x="1714" y="309" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="11.5" font-weight="700" fill="#0F172A">action</text>
+        <text x="1836" y="309" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="10.5" fill="#475569">TEXT NOT NULL</text>
+
+        
+        <text x="1714" y="333" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="11.5" font-weight="700" fill="#0F172A">resource</text>
+        <text x="1836" y="333" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="10.5" fill="#475569">TEXT NOT NULL</text>
+<rect x="1631" y="341" width="558" height="24" fill="#F8FAFC" />
+        
+        <text x="1714" y="357" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="11.5" font-weight="700" fill="#0F172A">justification</text>
+        <text x="1836" y="357" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="10.5" fill="#475569">TEXT NOT NULL</text>
+
+        <rect x="1642" y="368" width="30" height="18" rx="4" fill="#E2E8F0" />
+  <text x="1657" y="380.5" text-anchor="middle" font-family="'Segoe UI', Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="700" fill="#334155">IDX</text>
+        <text x="1714" y="381" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="11.5" font-weight="700" fill="#0F172A">created_at</text>
+        <text x="1836" y="381" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="10.5" fill="#475569">TIMESTAMPTZ NOT NULL DEFAULT now()</text>
+    </g>
+  <g filter="url(#shadow)">
+      <rect x="50" y="445" width="560" height="312" rx="10" fill="#FFFFFF" stroke="#0284C7" stroke-width="2.2" />
+      <path d="M 60 445 H 600 Q 610 445 610 455 V 483 H 50 V 455 Q 50 445 60 445 Z" fill="#0369A1" />
+      <text x="64" y="469" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="14" font-weight="700" fill="#FFFFFF">students</text>
+      <text x="598" y="468" text-anchor="end" font-family="'Segoe UI', Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="10.5" font-weight="600" fill="#CBD5E1">TABELA CENTRAL</text>
+      
+        <rect x="62" y="486" width="30" height="18" rx="4" fill="#FEF3C7" />
+  <text x="77" y="498.5" text-anchor="middle" font-family="'Segoe UI', Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="700" fill="#92400E">PK</text>
+        <text x="134" y="499" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="11.5" font-weight="700" fill="#0F172A">id</text>
+        <text x="256" y="499" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="10.5" fill="#475569">UUID NOT NULL DEFAULT gen_random_uuid()</text>
+<rect x="51" y="507" width="558" height="24" fill="#F8FAFC" />
+        <rect x="62" y="510" width="30" height="18" rx="4" fill="#E0F2FE" />
+  <text x="77" y="522.5" text-anchor="middle" font-family="'Segoe UI', Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="700" fill="#075985">FK</text><rect x="96" y="510" width="30" height="18" rx="4" fill="#E2E8F0" />
+  <text x="111" y="522.5" text-anchor="middle" font-family="'Segoe UI', Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="700" fill="#334155">IDX</text>
+        <text x="134" y="523" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="11.5" font-weight="700" fill="#0F172A">school_class_id</text>
+        <text x="256" y="523" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="10.5" fill="#475569">UUID NOT NULL -&gt; school_classes(id)</text>
+
+        
+        <text x="134" y="547" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="11.5" font-weight="700" fill="#0F172A">name</text>
+        <text x="256" y="547" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="10.5" fill="#475569">TEXT NOT NULL</text>
+<rect x="51" y="555" width="558" height="24" fill="#F8FAFC" />
+        <rect x="62" y="558" width="30" height="18" rx="4" fill="#F3E8FF" />
+  <text x="77" y="570.5" text-anchor="middle" font-family="'Segoe UI', Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="700" fill="#6B21A8">UK</text>
+        <text x="134" y="571" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="11.5" font-weight="700" fill="#0F172A">registration</text>
+        <text x="256" y="571" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="10.5" fill="#475569">TEXT NOT NULL UNIQUE</text>
+
+        <rect x="62" y="582" width="30" height="18" rx="4" fill="#DCFCE7" />
+  <text x="77" y="594.5" text-anchor="middle" font-family="'Segoe UI', Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="700" fill="#166534">CHK</text><rect x="96" y="582" width="30" height="18" rx="4" fill="#E2E8F0" />
+  <text x="111" y="594.5" text-anchor="middle" font-family="'Segoe UI', Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="700" fill="#334155">IDX</text>
+        <text x="134" y="595" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="11.5" font-weight="700" fill="#0F172A">status</text>
+        <text x="256" y="595" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="10.5" fill="#475569">TEXT NOT NULL DEFAULT 'active'</text>
+<rect x="51" y="603" width="558" height="24" fill="#F8FAFC" />
+        <rect x="62" y="606" width="30" height="18" rx="4" fill="#DCFCE7" />
+  <text x="77" y="618.5" text-anchor="middle" font-family="'Segoe UI', Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="700" fill="#166534">CHK</text>
+        <text x="134" y="619" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="11.5" font-weight="700" fill="#0F172A">attendance_rate</text>
+        <text x="256" y="619" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="10.5" fill="#475569">NUMERIC(5,2) NOT NULL DEFAULT 100.00</text>
+
+        <rect x="62" y="630" width="30" height="18" rx="4" fill="#DCFCE7" />
+  <text x="77" y="642.5" text-anchor="middle" font-family="'Segoe UI', Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="700" fill="#166534">CHK</text>
+        <text x="134" y="643" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="11.5" font-weight="700" fill="#0F172A">missing_assignments</text>
+        <text x="278.9" y="643" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="10.5" fill="#475569">INTEGER NOT NULL DEFAULT 0</text>
+<rect x="51" y="651" width="558" height="24" fill="#F8FAFC" />
+        
+        <text x="134" y="667" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="11.5" font-weight="700" fill="#0F172A">guardian_name</text>
+        <text x="256" y="667" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="10.5" fill="#475569">TEXT NOT NULL</text>
+
+        
+        <text x="134" y="691" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="11.5" font-weight="700" fill="#0F172A">guardian_email</text>
+        <text x="256" y="691" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="10.5" fill="#475569">TEXT NOT NULL</text>
+<rect x="51" y="699" width="558" height="24" fill="#F8FAFC" />
+        
+        <text x="134" y="715" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="11.5" font-weight="700" fill="#0F172A">created_at</text>
+        <text x="256" y="715" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="10.5" fill="#475569">TIMESTAMPTZ NOT NULL DEFAULT now()</text>
+
+        
+        <text x="134" y="739" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="11.5" font-weight="700" fill="#0F172A">updated_at</text>
+        <text x="256" y="739" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="10.5" fill="#475569">TIMESTAMPTZ NOT NULL DEFAULT now()</text>
+    </g>
+  <g filter="url(#shadow)">
+      <rect x="840" y="445" width="560" height="288" rx="10" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.3" />
+      <path d="M 850 445 H 1390 Q 1400 445 1400 455 V 483 H 840 V 455 Q 840 445 850 445 Z" fill="#1E293B" />
+      <text x="854" y="469" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="14" font-weight="700" fill="#FFFFFF">attitude_evaluations</text>
+      
+      
+        <rect x="852" y="486" width="30" height="18" rx="4" fill="#FEF3C7" />
+  <text x="867" y="498.5" text-anchor="middle" font-family="'Segoe UI', Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="700" fill="#92400E">PK</text>
+        <text x="924" y="499" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="11.5" font-weight="700" fill="#0F172A">id</text>
+        <text x="1046" y="499" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="10.5" fill="#475569">UUID NOT NULL DEFAULT gen_random_uuid()</text>
+<rect x="841" y="507" width="558" height="24" fill="#F8FAFC" />
+        <rect x="852" y="510" width="30" height="18" rx="4" fill="#E0F2FE" />
+  <text x="867" y="522.5" text-anchor="middle" font-family="'Segoe UI', Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="700" fill="#075985">FK</text><rect x="886" y="510" width="30" height="18" rx="4" fill="#E2E8F0" />
+  <text x="901" y="522.5" text-anchor="middle" font-family="'Segoe UI', Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="700" fill="#334155">IDX</text>
+        <text x="924" y="523" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="11.5" font-weight="700" fill="#0F172A">student_id</text>
+        <text x="1046" y="523" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="10.5" fill="#475569">UUID NOT NULL -&gt; students(id) [CASCADE]</text>
+
+        <rect x="852" y="534" width="30" height="18" rx="4" fill="#E0F2FE" />
+  <text x="867" y="546.5" text-anchor="middle" font-family="'Segoe UI', Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="700" fill="#075985">FK</text><rect x="886" y="534" width="30" height="18" rx="4" fill="#E2E8F0" />
+  <text x="901" y="546.5" text-anchor="middle" font-family="'Segoe UI', Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="700" fill="#334155">IDX</text>
+        <text x="924" y="547" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="11.5" font-weight="700" fill="#0F172A">teacher_id</text>
+        <text x="1046" y="547" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="10.5" fill="#475569">UUID NOT NULL -&gt; teachers(id) [RESTRICT]</text>
+<rect x="841" y="555" width="558" height="24" fill="#F8FAFC" />
+        <rect x="852" y="558" width="30" height="18" rx="4" fill="#E0F2FE" />
+  <text x="867" y="570.5" text-anchor="middle" font-family="'Segoe UI', Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="700" fill="#075985">FK</text><rect x="886" y="558" width="30" height="18" rx="4" fill="#E2E8F0" />
+  <text x="901" y="570.5" text-anchor="middle" font-family="'Segoe UI', Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="700" fill="#334155">IDX</text>
+        <text x="924" y="571" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="11.5" font-weight="700" fill="#0F172A">category_id</text>
+        <text x="1046" y="571" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="10.5" fill="#475569">UUID NOT NULL -&gt; attitude_categories(id)</text>
+
+        <rect x="852" y="582" width="30" height="18" rx="4" fill="#DCFCE7" />
+  <text x="867" y="594.5" text-anchor="middle" font-family="'Segoe UI', Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="700" fill="#166534">CHK</text>
+        <text x="924" y="595" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="11.5" font-weight="700" fill="#0F172A">polarity</text>
+        <text x="1046" y="595" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="10.5" fill="#475569">TEXT NOT NULL (positive|growth|neutral)</text>
+<rect x="841" y="603" width="558" height="24" fill="#F8FAFC" />
+        <rect x="852" y="606" width="30" height="18" rx="4" fill="#DCFCE7" />
+  <text x="867" y="618.5" text-anchor="middle" font-family="'Segoe UI', Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="700" fill="#166534">CHK</text>
+        <text x="924" y="619" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="11.5" font-weight="700" fill="#0F172A">score</text>
+        <text x="1046" y="619" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="10.5" fill="#475569">INTEGER NOT NULL (1..5)</text>
+
+        
+        <text x="924" y="643" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="11.5" font-weight="700" fill="#0F172A">note</text>
+        <text x="1046" y="643" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="10.5" fill="#475569">TEXT NULL</text>
+<rect x="841" y="651" width="558" height="24" fill="#F8FAFC" />
+        <rect x="852" y="654" width="30" height="18" rx="4" fill="#E2E8F0" />
+  <text x="867" y="666.5" text-anchor="middle" font-family="'Segoe UI', Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="700" fill="#334155">IDX</text>
+        <text x="924" y="667" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="11.5" font-weight="700" fill="#0F172A">evaluated_at</text>
+        <text x="1046" y="667" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="10.5" fill="#475569">TIMESTAMPTZ NOT NULL DEFAULT now()</text>
+
+        
+        <text x="924" y="691" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="11.5" font-weight="700" fill="#0F172A">created_at</text>
+        <text x="1046" y="691" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="10.5" fill="#475569">TIMESTAMPTZ NOT NULL DEFAULT now()</text>
+<rect x="841" y="699" width="558" height="24" fill="#F8FAFC" />
+        
+        <text x="924" y="715" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="11.5" font-weight="700" fill="#0F172A">updated_at</text>
+        <text x="1046" y="715" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="10.5" fill="#475569">TIMESTAMPTZ NOT NULL DEFAULT now()</text>
+    </g>
+  <g filter="url(#shadow)">
+      <rect x="1630" y="470" width="560" height="312" rx="10" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.3" />
+      <path d="M 1640 470 H 2180 Q 2190 470 2190 480 V 508 H 1630 V 480 Q 1630 470 1640 470 Z" fill="#1E293B" />
+      <text x="1644" y="494" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="14" font-weight="700" fill="#FFFFFF">dialogue_requests</text>
+      <text x="2178" y="493" text-anchor="end" font-family="'Segoe UI', Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="10.5" font-weight="600" fill="#CBD5E1">CONTRADITÓRIO · LGPD</text>
+      
+        <rect x="1642" y="511" width="30" height="18" rx="4" fill="#FEF3C7" />
+  <text x="1657" y="523.5" text-anchor="middle" font-family="'Segoe UI', Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="700" fill="#92400E">PK</text>
+        <text x="1714" y="524" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="11.5" font-weight="700" fill="#0F172A">id</text>
+        <text x="1836" y="524" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="10.5" fill="#475569">UUID NOT NULL DEFAULT gen_random_uuid()</text>
+<rect x="1631" y="532" width="558" height="24" fill="#F8FAFC" />
+        <rect x="1642" y="535" width="30" height="18" rx="4" fill="#E0F2FE" />
+  <text x="1657" y="547.5" text-anchor="middle" font-family="'Segoe UI', Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="700" fill="#075985">FK</text><rect x="1676" y="535" width="30" height="18" rx="4" fill="#E2E8F0" />
+  <text x="1691" y="547.5" text-anchor="middle" font-family="'Segoe UI', Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="700" fill="#334155">IDX</text>
+        <text x="1714" y="548" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="11.5" font-weight="700" fill="#0F172A">student_id</text>
+        <text x="1836" y="548" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="10.5" fill="#475569">UUID NOT NULL -&gt; students(id) [CASCADE]</text>
+
+        <rect x="1642" y="559" width="30" height="18" rx="4" fill="#E0F2FE" />
+  <text x="1657" y="571.5" text-anchor="middle" font-family="'Segoe UI', Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="700" fill="#075985">FK</text><rect x="1676" y="559" width="30" height="18" rx="4" fill="#E2E8F0" />
+  <text x="1691" y="571.5" text-anchor="middle" font-family="'Segoe UI', Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="700" fill="#334155">IDX</text>
+        <text x="1714" y="572" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="11.5" font-weight="700" fill="#0F172A">evaluation_id</text>
+        <text x="1836" y="572" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="10.5" fill="#475569">UUID NULL -&gt; attitude_evaluations(id)</text>
+<rect x="1631" y="580" width="558" height="24" fill="#F8FAFC" />
+        <rect x="1642" y="583" width="30" height="18" rx="4" fill="#DCFCE7" />
+  <text x="1657" y="595.5" text-anchor="middle" font-family="'Segoe UI', Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="700" fill="#166534">CHK</text>
+        <text x="1714" y="596" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="11.5" font-weight="700" fill="#0F172A">author_type</text>
+        <text x="1836" y="596" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="10.5" fill="#475569">TEXT NOT NULL (student|guardian)</text>
+
+        
+        <text x="1714" y="620" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="11.5" font-weight="700" fill="#0F172A">author_name</text>
+        <text x="1836" y="620" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="10.5" fill="#475569">TEXT NOT NULL</text>
+<rect x="1631" y="628" width="558" height="24" fill="#F8FAFC" />
+        
+        <text x="1714" y="644" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="11.5" font-weight="700" fill="#0F172A">message</text>
+        <text x="1836" y="644" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="10.5" fill="#475569">TEXT NOT NULL</text>
+
+        
+        <text x="1714" y="668" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="11.5" font-weight="700" fill="#0F172A">response</text>
+        <text x="1836" y="668" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="10.5" fill="#475569">TEXT NULL</text>
+<rect x="1631" y="676" width="558" height="24" fill="#F8FAFC" />
+        
+        <text x="1714" y="692" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="11.5" font-weight="700" fill="#0F172A">responded_by</text>
+        <text x="1836" y="692" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="10.5" fill="#475569">TEXT NULL</text>
+
+        <rect x="1642" y="703" width="30" height="18" rx="4" fill="#DCFCE7" />
+  <text x="1657" y="715.5" text-anchor="middle" font-family="'Segoe UI', Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="700" fill="#166534">CHK</text><rect x="1676" y="703" width="30" height="18" rx="4" fill="#E2E8F0" />
+  <text x="1691" y="715.5" text-anchor="middle" font-family="'Segoe UI', Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="700" fill="#334155">IDX</text>
+        <text x="1714" y="716" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="11.5" font-weight="700" fill="#0F172A">status</text>
+        <text x="1836" y="716" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="10.5" fill="#475569">TEXT NOT NULL DEFAULT 'open'</text>
+<rect x="1631" y="724" width="558" height="24" fill="#F8FAFC" />
+        
+        <text x="1714" y="740" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="11.5" font-weight="700" fill="#0F172A">created_at</text>
+        <text x="1836" y="740" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="10.5" fill="#475569">TIMESTAMPTZ NOT NULL DEFAULT now()</text>
+
+        
+        <text x="1714" y="764" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="11.5" font-weight="700" fill="#0F172A">updated_at</text>
+        <text x="1836" y="764" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="10.5" fill="#475569">TIMESTAMPTZ NOT NULL DEFAULT now()</text>
+    </g>
+  <g filter="url(#shadow)">
+      <rect x="50" y="915" width="560" height="264" rx="10" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.3" />
+      <path d="M 60 915 H 600 Q 610 915 610 925 V 953 H 50 V 925 Q 50 915 60 915 Z" fill="#1E293B" />
+      <text x="64" y="939" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="14" font-weight="700" fill="#FFFFFF">self_evaluations</text>
+      <text x="598" y="938" text-anchor="end" font-family="'Segoe UI', Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="10.5" font-weight="600" fill="#CBD5E1">UQ (student_id, category_id, period_label)</text>
+      
+        <rect x="62" y="956" width="30" height="18" rx="4" fill="#FEF3C7" />
+  <text x="77" y="968.5" text-anchor="middle" font-family="'Segoe UI', Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="700" fill="#92400E">PK</text>
+        <text x="134" y="969" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="11.5" font-weight="700" fill="#0F172A">id</text>
+        <text x="256" y="969" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="10.5" fill="#475569">UUID NOT NULL DEFAULT gen_random_uuid()</text>
+<rect x="51" y="977" width="558" height="24" fill="#F8FAFC" />
+        <rect x="62" y="980" width="30" height="18" rx="4" fill="#E0F2FE" />
+  <text x="77" y="992.5" text-anchor="middle" font-family="'Segoe UI', Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="700" fill="#075985">FK</text><rect x="96" y="980" width="30" height="18" rx="4" fill="#E2E8F0" />
+  <text x="111" y="992.5" text-anchor="middle" font-family="'Segoe UI', Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="700" fill="#334155">IDX</text>
+        <text x="134" y="993" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="11.5" font-weight="700" fill="#0F172A">student_id</text>
+        <text x="256" y="993" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="10.5" fill="#475569">UUID NOT NULL -&gt; students(id) [CASCADE]</text>
+
+        <rect x="62" y="1004" width="30" height="18" rx="4" fill="#E0F2FE" />
+  <text x="77" y="1016.5" text-anchor="middle" font-family="'Segoe UI', Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="700" fill="#075985">FK</text><rect x="96" y="1004" width="30" height="18" rx="4" fill="#E2E8F0" />
+  <text x="111" y="1016.5" text-anchor="middle" font-family="'Segoe UI', Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="700" fill="#334155">IDX</text>
+        <text x="134" y="1017" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="11.5" font-weight="700" fill="#0F172A">category_id</text>
+        <text x="256" y="1017" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="10.5" fill="#475569">UUID NOT NULL -&gt; attitude_categories(id)</text>
+<rect x="51" y="1025" width="558" height="24" fill="#F8FAFC" />
+        <rect x="62" y="1028" width="30" height="18" rx="4" fill="#F3E8FF" />
+  <text x="77" y="1040.5" text-anchor="middle" font-family="'Segoe UI', Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="700" fill="#6B21A8">UK</text>
+        <text x="134" y="1041" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="11.5" font-weight="700" fill="#0F172A">period_label</text>
+        <text x="256" y="1041" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="10.5" fill="#475569">TEXT NOT NULL</text>
+
+        <rect x="62" y="1052" width="30" height="18" rx="4" fill="#DCFCE7" />
+  <text x="77" y="1064.5" text-anchor="middle" font-family="'Segoe UI', Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="700" fill="#166534">CHK</text>
+        <text x="134" y="1065" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="11.5" font-weight="700" fill="#0F172A">score</text>
+        <text x="256" y="1065" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="10.5" fill="#475569">INTEGER NOT NULL (1..5)</text>
+<rect x="51" y="1073" width="558" height="24" fill="#F8FAFC" />
+        
+        <text x="134" y="1089" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="11.5" font-weight="700" fill="#0F172A">reflection_text</text>
+        <text x="256" y="1089" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="10.5" fill="#475569">TEXT NOT NULL</text>
+
+        
+        <text x="134" y="1113" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="11.5" font-weight="700" fill="#0F172A">submitted_at</text>
+        <text x="256" y="1113" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="10.5" fill="#475569">TIMESTAMPTZ NOT NULL DEFAULT now()</text>
+<rect x="51" y="1121" width="558" height="24" fill="#F8FAFC" />
+        
+        <text x="134" y="1137" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="11.5" font-weight="700" fill="#0F172A">created_at</text>
+        <text x="256" y="1137" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="10.5" fill="#475569">TIMESTAMPTZ NOT NULL DEFAULT now()</text>
+
+        
+        <text x="134" y="1161" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="11.5" font-weight="700" fill="#0F172A">updated_at</text>
+        <text x="256" y="1161" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="10.5" fill="#475569">TIMESTAMPTZ NOT NULL DEFAULT now()</text>
+    </g>
+  <g filter="url(#shadow)">
+      <rect x="840" y="915" width="560" height="216" rx="10" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.3" />
+      <path d="M 850 915 H 1390 Q 1400 915 1400 925 V 953 H 840 V 925 Q 840 915 850 915 Z" fill="#1E293B" />
+      <text x="854" y="939" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="14" font-weight="700" fill="#FFFFFF">attitude_categories</text>
+      <text x="1388" y="938" text-anchor="end" font-family="'Segoe UI', Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="10.5" font-weight="600" fill="#CBD5E1">5 DIMENSÕES BNCC / CASEL</text>
+      
+        <rect x="852" y="956" width="30" height="18" rx="4" fill="#FEF3C7" />
+  <text x="867" y="968.5" text-anchor="middle" font-family="'Segoe UI', Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="700" fill="#92400E">PK</text>
+        <text x="924" y="969" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="11.5" font-weight="700" fill="#0F172A">id</text>
+        <text x="1046" y="969" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="10.5" fill="#475569">UUID NOT NULL DEFAULT gen_random_uuid()</text>
+<rect x="841" y="977" width="558" height="24" fill="#F8FAFC" />
+        <rect x="852" y="980" width="30" height="18" rx="4" fill="#F3E8FF" />
+  <text x="867" y="992.5" text-anchor="middle" font-family="'Segoe UI', Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="700" fill="#6B21A8">UK</text><rect x="886" y="980" width="30" height="18" rx="4" fill="#DCFCE7" />
+  <text x="901" y="992.5" text-anchor="middle" font-family="'Segoe UI', Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="700" fill="#166534">CHK</text>
+        <text x="924" y="993" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="11.5" font-weight="700" fill="#0F172A">code</text>
+        <text x="1046" y="993" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="10.5" fill="#475569">TEXT NOT NULL UNIQUE (5 dimensões)</text>
+
+        
+        <text x="924" y="1017" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="11.5" font-weight="700" fill="#0F172A">name</text>
+        <text x="1046" y="1017" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="10.5" fill="#475569">TEXT NOT NULL</text>
+<rect x="841" y="1025" width="558" height="24" fill="#F8FAFC" />
+        
+        <text x="924" y="1041" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="11.5" font-weight="700" fill="#0F172A">description</text>
+        <text x="1046" y="1041" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="10.5" fill="#475569">TEXT NOT NULL</text>
+
+        
+        <text x="924" y="1065" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="11.5" font-weight="700" fill="#0F172A">casel_category</text>
+        <text x="1046" y="1065" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="10.5" fill="#475569">TEXT NOT NULL</text>
+<rect x="841" y="1073" width="558" height="24" fill="#F8FAFC" />
+        
+        <text x="924" y="1089" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="11.5" font-weight="700" fill="#0F172A">created_at</text>
+        <text x="1046" y="1089" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="10.5" fill="#475569">TIMESTAMPTZ NOT NULL DEFAULT now()</text>
+
+        
+        <text x="924" y="1113" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="11.5" font-weight="700" fill="#0F172A">updated_at</text>
+        <text x="1046" y="1113" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="10.5" fill="#475569">TIMESTAMPTZ NOT NULL DEFAULT now()</text>
+    </g>
+  <g filter="url(#shadow)">
+      <rect x="1630" y="915" width="560" height="336" rx="10" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.3" />
+      <path d="M 1640 915 H 2180 Q 2190 915 2190 925 V 953 H 1630 V 925 Q 1630 915 1640 915 Z" fill="#1E293B" />
+      <text x="1644" y="939" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="14" font-weight="700" fill="#FFFFFF">intervention_plans</text>
+      <text x="2178" y="938" text-anchor="end" font-family="'Segoe UI', Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="10.5" font-weight="600" fill="#CBD5E1">MTSS · TIERS 1–3</text>
+      
+        <rect x="1642" y="956" width="30" height="18" rx="4" fill="#FEF3C7" />
+  <text x="1657" y="968.5" text-anchor="middle" font-family="'Segoe UI', Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="700" fill="#92400E">PK</text>
+        <text x="1714" y="969" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="11.5" font-weight="700" fill="#0F172A">id</text>
+        <text x="1836" y="969" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="10.5" fill="#475569">UUID NOT NULL DEFAULT gen_random_uuid()</text>
+<rect x="1631" y="977" width="558" height="24" fill="#F8FAFC" />
+        <rect x="1642" y="980" width="30" height="18" rx="4" fill="#E0F2FE" />
+  <text x="1657" y="992.5" text-anchor="middle" font-family="'Segoe UI', Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="700" fill="#075985">FK</text><rect x="1676" y="980" width="30" height="18" rx="4" fill="#E2E8F0" />
+  <text x="1691" y="992.5" text-anchor="middle" font-family="'Segoe UI', Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="700" fill="#334155">IDX</text>
+        <text x="1714" y="993" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="11.5" font-weight="700" fill="#0F172A">student_id</text>
+        <text x="1836" y="993" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="10.5" fill="#475569">UUID NOT NULL -&gt; students(id) [CASCADE]</text>
+
+        <rect x="1642" y="1004" width="30" height="18" rx="4" fill="#E0F2FE" />
+  <text x="1657" y="1016.5" text-anchor="middle" font-family="'Segoe UI', Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="700" fill="#075985">FK</text><rect x="1676" y="1004" width="30" height="18" rx="4" fill="#E2E8F0" />
+  <text x="1691" y="1016.5" text-anchor="middle" font-family="'Segoe UI', Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="700" fill="#334155">IDX</text>
+        <text x="1714" y="1017" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="11.5" font-weight="700" fill="#0F172A">target_category_id</text>
+        <text x="1851.8" y="1017" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="10.5" fill="#475569">UUID NOT NULL -&gt; attitude_categories(id)</text>
+<rect x="1631" y="1025" width="558" height="24" fill="#F8FAFC" />
+        <rect x="1642" y="1028" width="30" height="18" rx="4" fill="#DCFCE7" />
+  <text x="1657" y="1040.5" text-anchor="middle" font-family="'Segoe UI', Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="700" fill="#166534">CHK</text><rect x="1676" y="1028" width="30" height="18" rx="4" fill="#E2E8F0" />
+  <text x="1691" y="1040.5" text-anchor="middle" font-family="'Segoe UI', Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="700" fill="#334155">IDX</text>
+        <text x="1714" y="1041" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="11.5" font-weight="700" fill="#0F172A">tier</text>
+        <text x="1836" y="1041" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="10.5" fill="#475569">TEXT NOT NULL (tier_1|tier_2|tier_3)</text>
+
+        
+        <text x="1714" y="1065" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="11.5" font-weight="700" fill="#0F172A">title</text>
+        <text x="1836" y="1065" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="10.5" fill="#475569">TEXT NOT NULL</text>
+<rect x="1631" y="1073" width="558" height="24" fill="#F8FAFC" />
+        
+        <text x="1714" y="1089" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="11.5" font-weight="700" fill="#0F172A">strategy</text>
+        <text x="1836" y="1089" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="10.5" fill="#475569">TEXT NOT NULL</text>
+
+        
+        <text x="1714" y="1113" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="11.5" font-weight="700" fill="#0F172A">responsible_name</text>
+        <text x="1837.6" y="1113" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="10.5" fill="#475569">TEXT NOT NULL</text>
+<rect x="1631" y="1121" width="558" height="24" fill="#F8FAFC" />
+        
+        <text x="1714" y="1137" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="11.5" font-weight="700" fill="#0F172A">start_date</text>
+        <text x="1836" y="1137" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="10.5" fill="#475569">DATE NOT NULL</text>
+
+        <rect x="1642" y="1148" width="30" height="18" rx="4" fill="#DCFCE7" />
+  <text x="1657" y="1160.5" text-anchor="middle" font-family="'Segoe UI', Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="700" fill="#166534">CHK</text>
+        <text x="1714" y="1161" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="11.5" font-weight="700" fill="#0F172A">review_date</text>
+        <text x="1836" y="1161" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="10.5" fill="#475569">DATE NOT NULL (&gt;= start_date)</text>
+<rect x="1631" y="1169" width="558" height="24" fill="#F8FAFC" />
+        <rect x="1642" y="1172" width="30" height="18" rx="4" fill="#DCFCE7" />
+  <text x="1657" y="1184.5" text-anchor="middle" font-family="'Segoe UI', Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="700" fill="#166534">CHK</text>
+        <text x="1714" y="1185" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="11.5" font-weight="700" fill="#0F172A">status</text>
+        <text x="1836" y="1185" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="10.5" fill="#475569">TEXT NOT NULL DEFAULT 'planned'</text>
+
+        
+        <text x="1714" y="1209" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="11.5" font-weight="700" fill="#0F172A">created_at</text>
+        <text x="1836" y="1209" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="10.5" fill="#475569">TIMESTAMPTZ NOT NULL DEFAULT now()</text>
+<rect x="1631" y="1217" width="558" height="24" fill="#F8FAFC" />
+        
+        <text x="1714" y="1233" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="11.5" font-weight="700" fill="#0F172A">updated_at</text>
+        <text x="1836" y="1233" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="10.5" fill="#475569">TIMESTAMPTZ NOT NULL DEFAULT now()</text>
+    </g>
+
+  <!-- Footer Panels -->
+  <g filter="url(#shadow)">
+    <rect x="50" y="1285" width="1045" height="325" rx="10" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.3" />
+    <text x="72" y="1313" font-family="'Segoe UI', Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="15" font-weight="700" fill="#0F172A">Restrições de Integridade (CHECK / UNIQUE) e Triggers Implementados</text>
+    <line x1="72" y1="1323" x2="1073" y2="1323" stroke="#E2E8F0" stroke-width="1" />
+    <text x="72" y="1337" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="10.8" font-weight="700" fill="#0F172A">• school_classes.segment</text>
+      <text x="355" y="1337" font-family="'Segoe UI', Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="11" fill="#475569">CHECK (segment IN ('fundamental_1','fundamental_2','high_school'))</text>
+<text x="72" y="1360" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="10.8" font-weight="700" fill="#0F172A">• teachers.email</text>
+      <text x="355" y="1360" font-family="'Segoe UI', Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="11" fill="#475569">UNIQUE (uq_teachers_email)</text>
+<text x="72" y="1383" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="10.8" font-weight="700" fill="#0F172A">• attitude_categories.code</text>
+      <text x="355" y="1383" font-family="'Segoe UI', Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="11" fill="#475569">UNIQUE + CHECK ('responsabilidade'..'respeito')</text>
+<text x="72" y="1406" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="10.8" font-weight="700" fill="#0F172A">• students.registration</text>
+      <text x="355" y="1406" font-family="'Segoe UI', Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="11" fill="#475569">UNIQUE (uq_students_registration)</text>
+<text x="72" y="1429" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="10.8" font-weight="700" fill="#0F172A">• students.status</text>
+      <text x="355" y="1429" font-family="'Segoe UI', Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="11" fill="#475569">CHECK (status IN ('active','inactive','transferred'))</text>
+<text x="72" y="1452" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="10.8" font-weight="700" fill="#0F172A">• students.attendance_rate / missing</text>
+      <text x="355" y="1452" font-family="'Segoe UI', Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="11" fill="#475569">CHECK (0..100) em NUMERIC(5,2) e CHECK (missing_assignments &gt;= 0)</text>
+<text x="72" y="1475" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="10.8" font-weight="700" fill="#0F172A">• attitude_evaluations.polarity / score</text>
+      <text x="355" y="1475" font-family="'Segoe UI', Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="11" fill="#475569">CHECK ('positive','growth_opportunity','neutral') e CHECK (score BETWEEN 1 AND 5)</text>
+<text x="72" y="1498" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="10.8" font-weight="700" fill="#0F172A">• self_evaluations</text>
+      <text x="355" y="1498" font-family="'Segoe UI', Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="11" fill="#475569">UNIQUE (student_id, category_id, period_label) + CHECK (score 1..5)</text>
+<text x="72" y="1521" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="10.8" font-weight="700" fill="#0F172A">• intervention_plans</text>
+      <text x="355" y="1521" font-family="'Segoe UI', Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="11" fill="#475569">CHECK tier ('tier_1'..'tier_3'), status ('planned'..'completed') e review_date &gt;= start_date</text>
+<text x="72" y="1544" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="10.8" font-weight="700" fill="#0F172A">• dialogue_requests / audit_logs</text>
+      <text x="355" y="1544" font-family="'Segoe UI', Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="11" fill="#475569">CHECK author_type, status e actor_role (5 papéis RBAC)</text>
+<text x="72" y="1567" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="10.8" font-weight="700" fill="#0F172A">• Triggers SQL</text>
+      <text x="355" y="1567" font-family="'Segoe UI', Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="11" fill="#475569">set_updated_at() em 8 tabelas mutáveis • prevent_audit_log_mutation() em audit_logs (LGPD)</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="1145" y="1285" width="1045" height="325" rx="10" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.3" />
+    <text x="1167" y="1313" font-family="'Segoe UI', Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="15" font-weight="700" fill="#0F172A">Índices Criados na Migration (13 CREATE INDEX)</text>
+    <line x1="1167" y1="1323" x2="2168" y2="1323" stroke="#E2E8F0" stroke-width="1" />
+    <text x="1167" y="1335" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="10.8" font-weight="700" fill="#0369A1">• idx_students_school_class_id</text>
+      <text x="1505" y="1335" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="10.5" fill="#475569">ON public.students (school_class_id)</text>
+<text x="1167" y="1355" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="10.8" font-weight="700" fill="#0369A1">• idx_students_status</text>
+      <text x="1505" y="1355" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="10.5" fill="#475569">ON public.students (status)</text>
+<text x="1167" y="1375" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="10.8" font-weight="700" fill="#0369A1">• idx_evaluations_student_id</text>
+      <text x="1505" y="1375" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="10.5" fill="#475569">ON public.attitude_evaluations (student_id)</text>
+<text x="1167" y="1395" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="10.8" font-weight="700" fill="#0369A1">• idx_evaluations_teacher_id</text>
+      <text x="1505" y="1395" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="10.5" fill="#475569">ON public.attitude_evaluations (teacher_id)</text>
+<text x="1167" y="1415" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="10.8" font-weight="700" fill="#0369A1">• idx_evaluations_category_id</text>
+      <text x="1505" y="1415" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="10.5" fill="#475569">ON public.attitude_evaluations (category_id)</text>
+<text x="1167" y="1435" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="10.8" font-weight="700" fill="#0369A1">• idx_evaluations_evaluated_at</text>
+      <text x="1505" y="1435" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="10.5" fill="#475569">ON public.attitude_evaluations (evaluated_at DESC)</text>
+<text x="1167" y="1455" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="10.8" font-weight="700" fill="#0369A1">• idx_self_evaluations_student_id</text>
+      <text x="1505" y="1455" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="10.5" fill="#475569">ON public.self_evaluations (student_id)</text>
+<text x="1167" y="1475" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="10.8" font-weight="700" fill="#0369A1">• idx_self_evaluations_category_id</text>
+      <text x="1505" y="1475" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="10.5" fill="#475569">ON public.self_evaluations (category_id)</text>
+<text x="1167" y="1495" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="10.8" font-weight="700" fill="#0369A1">• idx_interventions_student_tier</text>
+      <text x="1505" y="1495" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="10.5" fill="#475569">ON public.intervention_plans (student_id, tier)</text>
+<text x="1167" y="1515" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="10.8" font-weight="700" fill="#0369A1">• idx_interventions_target_category_id</text>
+      <text x="1505" y="1515" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="10.5" fill="#475569">ON public.intervention_plans (target_category_id)</text>
+<text x="1167" y="1535" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="10.8" font-weight="700" fill="#0369A1">• idx_dialogues_student_status</text>
+      <text x="1505" y="1535" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="10.5" fill="#475569">ON public.dialogue_requests (student_id, status)</text>
+<text x="1167" y="1555" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="10.8" font-weight="700" fill="#0369A1">• idx_dialogues_evaluation_id</text>
+      <text x="1505" y="1555" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="10.5" fill="#475569">ON public.dialogue_requests (evaluation_id)</text>
+<text x="1167" y="1575" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="10.8" font-weight="700" fill="#0369A1">• idx_audit_logs_student_created</text>
+      <text x="1505" y="1575" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="10.5" fill="#475569">ON public.audit_logs (student_id, created_at DESC)</text>
+  </g>
+</svg>
