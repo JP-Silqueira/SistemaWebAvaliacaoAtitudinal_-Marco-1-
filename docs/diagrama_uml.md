@@ -4,16 +4,16 @@ Documentação dos diagramas **UML** (Classes de Domínio, Enumerações, Arquit
 
 > [!NOTE]
 > **Fontes de verdade inspecionadas:**
-> - Tipos de domínio: [domain.ts](file:///c:/Users/claud/Desktop/projeto/src/types/domain.ts)
-> - Camada mock e consultas: [students.ts](file:///c:/Users/claud/Desktop/projeto/src/lib/data/students.ts), [index.ts](file:///c:/Users/claud/Desktop/projeto/src/lib/data/index.ts)
-> - Interface e roteamento: [layout.tsx](file:///c:/Users/claud/Desktop/projeto/src/app/layout.tsx), [page.tsx](file:///c:/Users/claud/Desktop/projeto/src/app/page.tsx), [students/page.tsx](file:///c:/Users/claud/Desktop/projeto/src/app/lab/students/page.tsx), [student-card.tsx](file:///c:/Users/claud/Desktop/projeto/src/components/students/student-card.tsx), [proxy.ts](file:///c:/Users/claud/Desktop/projeto/src/proxy.ts)
-> - Esquema SQL: [20261127222000_initial_schema.sql](file:///c:/Users/claud/Desktop/projeto/supabase/migrations/20261127222000_initial_schema.sql)
+> - Tipos de domínio: [domain.ts](../src/types/domain.ts)
+> - Camada mock e consultas: [students.ts](../src/lib/data/students.ts), [index.ts](../src/lib/data/index.ts)
+> - Interface e roteamento: [layout.tsx](../src/app/layout.tsx), [page.tsx](../src/app/page.tsx), [students/page.tsx](../src/app/lab/students/page.tsx), [student-card.tsx](../src/components/students/student-card.tsx), [proxy.ts](../src/proxy.ts)
+> - Esquema SQL: [20261127222000_initial_schema.sql](../supabase/migrations/20261127222000_initial_schema.sql)
 
 ---
 
 ## 1. UML — Diagrama de Classes de Domínio
 
-Mapeamento fiel das 9 entidades, 10 enumerações (uniões de literais) e do contrato `ActionResult<T>` definidos em [domain.ts](file:///c:/Users/claud/Desktop/projeto/src/types/domain.ts).
+Mapeamento fiel das 9 entidades, 10 enumerações (uniões de literais) e do contrato `ActionResult<T>` definidos em [domain.ts](../src/types/domain.ts).
 
 ```mermaid
 classDiagram
@@ -387,7 +387,7 @@ sequenceDiagram
 
 ## 4. UML — Diagrama de Estados da Interface (`StudentsPage`)
 
-Representa a máquina de estados discriminada (`StudentsLoadState`) e o estado vazio derivado implementados em [students/page.tsx](file:///c:/Users/claud/Desktop/projeto/src/app/lab/students/page.tsx).
+Representa a máquina de estados discriminada (`StudentsLoadState`) e o estado vazio derivado implementados em [students/page.tsx](../src/app/lab/students/page.tsx).
 
 ```mermaid
 stateDiagram-v2

@@ -4,8 +4,8 @@ Documentação do **MER (Modelo Entidade-Relacionamento)** do sistema EduAtitude
 
 > [!NOTE]
 > **Fontes de verdade inspecionadas:**
-> - Esquema SQL: [20261127222000_initial_schema.sql](file:///c:/Users/claud/Desktop/projeto/supabase/migrations/20261127222000_initial_schema.sql)
-> - Tipos de domínio: [domain.ts](file:///c:/Users/claud/Desktop/projeto/src/types/domain.ts)
+> - Esquema SQL: [20261127222000_initial_schema.sql](../supabase/migrations/20261127222000_initial_schema.sql)
+> - Tipos de domínio: [domain.ts](../src/types/domain.ts)
 
 ---
 

@@ -59,9 +59,15 @@ A organização segue a estrutura padronizada no Capítulo 2 (seção 2.4.8), ad
 SistemaWebAvaliacaoAtitudinal_[Marco 1]/
 ├── .github/
 │   └── workflows/                             # Pipelines de CI/CD (Cap. 16 e 17)
+├── docs/
+│   ├── diagrama_uml.md                        # Documentação complementar UML (classes, arquitetura, sequência e estados)
+│   └── diagrama_mer.md                        # Documentação complementar MER (Mermaid, restrições, índices e triggers)
 ├── public/
 │   ├── uml.png                                # Artefato 1: Diagrama UML de classes conceitual (agnóstico de tecnologia)
-│   └── der.png                                # Artefato 2: Diagrama Entidade-Relacionamento traduzido para PostgreSQL
+│   ├── der.png                                # Artefato 2: Diagrama Entidade-Relacionamento traduzido para PostgreSQL
+│   ├── mer.png                                # Cópia complementar do MER PostgreSQL
+│   ├── mer.svg                                # Versão vetorial complementar do MER
+│   └── uml.svg                                # Versão vetorial complementar de arquitetura UML
 ├── src/
 │   ├── app/
 │   │   ├── lab/
@@ -92,7 +98,8 @@ SistemaWebAvaliacaoAtitudinal_[Marco 1]/
 │   │   └── domain.ts                          # Artefato 3: Fonte da verdade dos tipos de domínio e ActionResult<T>
 │   └── proxy.ts                               # Proxy do Next.js 16 (Cap. 6; autenticação no Cap. 10)
 ├── supabase/
-│   ├── migrations/                            # Migrações SQL versionadas (Cap. 8)
+│   ├── migrations/
+│   │   └── 20261127222000_initial_schema.sql  # Migration SQL inicial (9 tabelas, 13 índices e triggers LGPD)
 │   ├── seeds/                                 # Scripts de carga inicial de demonstração (Cap. 8)
 │   └── tests/
 │       └── rls/                               # Scripts de verificação de políticas RLS (Cap. 11)
@@ -134,7 +141,7 @@ SistemaWebAvaliacaoAtitudinal_[Marco 1]/
 - **Chaves primárias e timestamps:** todas as 9 tabelas utilizam `id UUID PRIMARY KEY DEFAULT gen_random_uuid()` (evitando `SERIAL`, que vaza ordem de criação) e `created_at TIMESTAMPTZ NOT NULL DEFAULT now()`. Todas as tabelas mutáveis possuem `updated_at TIMESTAMPTZ NOT NULL DEFAULT now()`; `audit_logs` omite `updated_at` intencionalmente por ser uma trilha imutável de auditoria LGPD.
 - **Tipos seguros:** `TIMESTAMPTZ` (nunca `TIMESTAMP` sem fuso) para instantes exatos; `INTEGER` com `CHECK (score BETWEEN 1 AND 5)` para notas e `NUMERIC(5,2)` para `attendance_rate` (nunca `FLOAT`, evitando imprecisão binária).
 - **Integridade referencial e restrições:** `students.registration`, `teachers.email` e `attitude_categories.code` recebem restrição `UNIQUE`; `self_evaluations` possui unicidade composta em `(student_id, category_id, period_label)`; todas as enumerações têm restrição `CHECK`; FKs de composição ligadas a `students` usam `ON DELETE CASCADE`, enquanto referências opcionais (`dialogue_requests.evaluation_id`, `audit_logs.student_id`) usam `ON DELETE SET NULL` e referências estruturais usam `ON DELETE RESTRICT`.
-- **Índices:** criados explicitamente nas chaves estrangeiras e filtros de consulta mais frequentes (`students.school_class_id`, `students.status`, `attitude_evaluations.student_id`, `teacher_id`, `category_id`, `evaluated_at`, `self_evaluations.student_id`, `intervention_plans(student_id, tier)`, `dialogue_requests(student_id, status)` e `audit_logs(student_id, created_at)`).
+- **Índices e triggers (13 índices):** criados explicitamente nas chaves estrangeiras e filtros de consulta mais frequentes (`students.school_class_id`, `students.status`, `attitude_evaluations.student_id`, `teacher_id`, `category_id`, `evaluated_at`, `self_evaluations.student_id`, `self_evaluations.category_id`, `intervention_plans(student_id, tier)`, `intervention_plans.target_category_id`, `dialogue_requests(student_id, status)`, `dialogue_requests.evaluation_id` e `audit_logs(student_id, created_at)`), acompanhados pelos triggers `set_updated_at()` nas 8 tabelas mutáveis e `prevent_audit_log_mutation()` na trilha imutável LGPD (`supabase/migrations/20261127222000_initial_schema.sql`).
 
 ---
 
